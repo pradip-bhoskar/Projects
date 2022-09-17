@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+
+    <style>
+
+        .div_centered
+        {
+            margin: 10px;
+            padding: 10px;
+            
+            /* position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* display: grid;
+            place-items:center; */
+        }
+
+        .container
+        {
+                animation: color 3s ease infinite alternate;
+                
+        }
+
+        @keyframes color{
+
+            0% {
+                background-color: red;
+            }
+            20% {
+                background-color: yellow;
+            }
+            40% {
+                background-color: blue;
+            }
+            60% {
+                background-color: green;
+            }
+            80% {
+                background-color:purple;
+            }
+            100% {
+                background-color: rgb(255, 81, 0);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container div_centered" style="background-color:gradient(56,85,545); min-height: 100vh; height: 100vh; width: 100vw;">  
+        
+        <div class="div_centered" style="background-color: #fff; margin: 20px;border-radius: 50%; height: 50%; width: 50%;">
+
+            <div id="clock"> 
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+
+<script type="text/javascript">
+
+    setInterval(()=>{
+
+        var date = new Date();
+        document.getElementById("clock").innerHTML=`<h1>${date.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric',second:'numeric', hour12: true })}</h1>
+        ${date.toDateString()}`;
+
+    },1000);
+        
+</script>
+</html>
