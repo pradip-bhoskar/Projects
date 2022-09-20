@@ -1,0 +1,79 @@
+<!-- 
+Author: Pradip Bhoskar
+Github: https://github.com/pradip-bhoskar
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="calculator.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="result_card">
+            <div class="answer"></div>
+            <div class="result">
+                <h3 id="expression"></h3>
+                <h1 id="enteredValue">0</h1>
+            </div>
+        </div>
+
+        <div class="common">
+
+            <div class="buttons_card">
+                <div style="padding-top: 20px;">
+                    <button id="AC" class="button ac_btn" type="button" value="" onclick="all_clear('AC')">AC</button>
+                    <button id="(" class="button op_btn" type="button" value="" onclick="key_value('(')">(</button>
+                    <button id=")" class="button op_btn" type="button" value="" onclick="key_value(')')">)</button>
+                    <button id="Del" class="button del_btn" type="button" value=""
+                        onclick="back_space('Del')">Del</button>
+                </div>
+                <div>
+                    <button id="1" class="button number" type="button" value="" onclick="key_value(1)">1</button>
+                    <button id="2" class="button number" type="button" value="" onclick="key_value(2)">2</button>
+                    <button id="3" class="button number" type="button" value="" onclick="key_value(3)">3</button>
+                    <button id="/" class="button op_btn" type="button" value="" onclick="key_value('/')">/</button>
+                </div>
+                <div>
+                    <button id="4" class="button number" type="button" value="" onclick="key_value(4)">4</button>
+                    <button id="5" class="button number" type="button" value="" onclick="key_value(5)">5</button>
+                    <button id="6" class="button number" type="button" value="" onclick="key_value(6)">6</button>
+                    <button id="*" class="button op_btn" type="button" value="" onclick="key_value('*')">*</button>
+                </div>
+                <div>
+                    <button id="7" class="button number" type="button" value="" onclick="key_value(7)">7</button>
+                    <button id="8" class="button number" type="button" value="" onclick="key_value(8)">8</button>
+                    <button id="9" class="button number" type="button" value="" onclick="key_value(9)">9</button>
+                    <button id="-" class="button op_btn" type="button" value="" onclick="key_value('-')">-</button>
+                </div>
+                <div>
+                    <button id="0" class="button number" type="button" value="" onclick="key_value(0)">0</button>
+                    <button id="." class="button dot_btn" type="button" value="" onclick="key_value('.')">.</button>
+                    <button id="=" class="button eq_btn" type="button" value="" onclick="key_value('=')">=</button>
+                    <button id="+" class="button op_btn" type="button" value="" onclick="key_value('+')">+</button>
+                </div>
+            </div>
+
+            <div class="history_card">
+
+                <button style="margin: 10px; padding:5px" onclick="show_history()">History</button>
+                <div class="history" style="display:none ;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
+
