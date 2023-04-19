@@ -158,6 +158,27 @@ small {
 
 
 
+.bg-primary-light {
+    background: var(--color-primary-light);
+}
+
+.bg-danger-light {
+    background: var(--color-danger-light);
+}
+
+.bg-success-light {
+    background: var(--color-success-light);
+}
+
+.bg-purple-light {
+    background: var(--color-purple-light);
+}
+
+.bg-dark-light {
+    background: var(--color-dark-light);
+}
+
+
 
 
 /* -------------------------------- Nav Bar Style --------------------------------- */
@@ -247,7 +268,7 @@ nav .profile-area .profile-photo {
 
 main {
     display: grid;
-    grid-template-columns: 16rem auto 30rem;
+    grid-template-columns: 16rem auto 26rem;
     gap: 2rem;
     width: 96%;
     margin: 1rem auto 4rem;
@@ -365,7 +386,7 @@ main section.middle .header input[type="date"] {
 main section.middle .cards {
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
@@ -374,12 +395,12 @@ main section.middle .cards .card {
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     color: white;
-    height: 16rem;
+    height: 14rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 2rem 3rem var(--color-danger-light);
-    min-width: 24rem;
+    min-width: 20rem;
     transition: all 200ms ease;
 }
 
@@ -538,6 +559,128 @@ canvas#chart {
 
 
 /* -------------------------------- Right Section --------------------------------- */
-main section.right {
+/* main section.right {
     background: orange;
+} */
+
+/* :::::::::::::::::::: Investments :::::::::::::::::: */
+
+main section.right .investments {
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
 }
+
+main section.right .investments img {
+    width: 2.4rem;
+}
+
+main section.right .investments .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--card-padding);
+    padding-bottom: 0rem;
+}
+
+main section.right .investments .header a {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+main section.right .investments .investment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--card-padding);
+    border-bottom: 1px solid var(--color-light);
+    transition: all 300ms ease;
+}
+
+main section.right .investments .investment:last-child {
+    border: none;
+}
+
+main section.right .investments .investment:hover {
+    background: var(--color-light);
+    cursor: pointer;
+}
+
+/* :::::::::::::::::::: Investments :::::::::::::::::: */
+
+main .recent-transactions {
+    margin-top: 2rem;
+}
+
+main .recent-transactions img {
+    width: 2.2rem;
+}
+
+main .recent-transactions .header {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--card-padding);
+    padding-bottom: 0rem;
+}
+
+main .recent-transactions .header a {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+main .recent-transactions .transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem var(--card-padding);
+    border-radius: var(--card-border-radius);
+    transition: all 300ms ease;
+}
+
+main .recent-transactions .transaction:hover {
+    background: var(--color-white);
+    cursor: pointer;
+}
+
+main .recent-transactions .transaction .service {
+    display: flex;
+    gap: 1rem;
+}
+
+main .recent-transactions .transaction .service .icon {
+    padding: var(--padding-2);
+    border-radius: var(--border-radius-1);
+    display: flex;
+    align-items: center;
+}
+
+main .recent-transactions .card-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .recent-transactions .card-details .card {
+    display: flex;
+    width: 4.6rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
