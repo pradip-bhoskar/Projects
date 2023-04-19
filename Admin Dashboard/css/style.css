@@ -180,6 +180,15 @@ small {
 
 
 
+.dark-theme {
+    --color-white: #131316;
+    --color-light: #23232a;
+    --color-dark: #ddd;
+    --color-gray-dark: #adacb5;
+}
+
+
+
 
 /* -------------------------------- Nav Bar Style --------------------------------- */
 
@@ -691,24 +700,31 @@ main .recent-transactions .card-details .card {
         background: transparent;
         color: var(--color-dark);
     }
-    
+
     main {
         grid-template-columns: 1fr;
     }
-    
+
     main aside {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         z-index: 3;
         background: var(--color-white);
         width: 20rem;
         height: 100vh;
         box-shadow: 2rem 0 2rem var(--color-primary-light);
         display: none;
+        animation: showSidebar 300ms ease-in-out forwards;
     }
 
-    main aside button#close-btn{
+    @keyframes showSidebar {
+        to {
+            left: 0;
+        }
+    }
+
+    main aside button#close-btn {
         display: inline-block;
         width: 3rem;
         height: 3rem;
@@ -720,19 +736,19 @@ main .recent-transactions .card-details .card {
         color: var(--color-dark);
     }
 
-    button:hover{
+    button:hover {
         cursor: pointer;
     }
 
-    main aside .sidebar{
+    main aside .sidebar {
         margin-top: 4rem;
     }
 
-    main aside .updates{
-       display: none;
+    main aside .updates {
+        display: none;
     }
 
-    main section.middle .cards{
+    main section.middle .cards {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -740,8 +756,8 @@ main .recent-transactions .card-details .card {
         margin: 3rem 0 1rem;
     }
 
-    main section.right .recent-transactions{
-             margin-top: 3rem;
+    main section.right .recent-transactions {
+        margin-top: 3rem;
     }
 }
 
@@ -751,12 +767,26 @@ main .recent-transactions .card-details .card {
 /* -------------------------------- Media Query for Mobiles --------------------------------- */
 
 
+@media screen and (max-width: 600px) {
 
+    nav .profile-area {
+        gap: 2.6rem;
+    }
 
+    nav .profile h5,
+    nav .profile span {
+        display: none;
+    }
 
+    main section.middle .cards {
+        grid-template-columns: 1fr;
+    }
 
+    main section.middle .fast-payment {
+        flex-direction: column;
+        align-self: flex-start;
+        margin-top: 3rem;
+        gap: 1rem;
+    }
 
-
-
-
-
+}
